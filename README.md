@@ -15,7 +15,7 @@ A Python command-line tool that generates a complete academic syllabus using the
 ## Requirements
 - Python 3.10+
 - Ollama installed locally
-- `qwen3:4b` pulled in Ollama
+- `llama3.1:8b` pulled in Ollama
 
 ## Setup
 
@@ -37,7 +37,7 @@ ollama serve
 
 ### 4. Pull the model
 ```powershell
-ollama pull qwen3:4b
+ollama pull llama3.1:8b
 ```
 
 ## Run
@@ -55,4 +55,3 @@ The script will ask for:
 ## Notes
 - Ollama must be running at `http://localhost:11434`
 - The script saves output as a UTF-8 text file when you choose the save option
-- If generation formatting is imperfect, the script includes basic fallbacks for JSON parsing
