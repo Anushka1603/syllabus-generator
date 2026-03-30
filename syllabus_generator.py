@@ -1,8 +1,3 @@
-"""
-Syllabus generator using Ollama and the qwen3:4b model.
-Generates academic syllabus content aligned with Bloom's Taxonomy.
-"""
-
 import io
 import json
 import re
@@ -38,7 +33,6 @@ SECTION_LABELS = {
 
 
 def query_ollama(prompt: str, system: str = "") -> str:
-    """Send a prompt to Ollama and return the response text."""
     payload = {
         "model": MODEL,
         "prompt": prompt,
@@ -67,7 +61,6 @@ def query_ollama(prompt: str, system: str = "") -> str:
 
 
 def check_ollama_connection() -> bool:
-    """Return True if Ollama is reachable and the configured model is available."""
     try:
         response = requests.get(OLLAMA_TAGS_URL, timeout=5)
         response.raise_for_status()
